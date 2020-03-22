@@ -12,11 +12,16 @@ class HomePage extends StatefulWidget {
 
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
+  String _country = 'France';
+  int _newConfirmed = 1799;
+  int _totalConfirmed = 14431;
+  int _newDeaths = 112;
+  int _totalDeaths = 562;
+  
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _totalConfirmed++;
     });
   }
 
@@ -31,19 +36,48 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              '$_country',
+               style: Theme.of(context).textTheme.display1,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text('Total confirmed:'),
+                Text('$_totalConfirmed')
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text('New confirmed:'),
+                Text('$_newConfirmed')
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text('Total death:'),
+                Text('$_totalDeaths')
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text('New death:'),
+                Text('$_newDeaths')
+              ],
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+        tooltip: 'Refresh',
+        child: Icon(Icons.refresh),
       ),
     );
   }
