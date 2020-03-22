@@ -1,4 +1,4 @@
-import 'package:covid19_flutter/pages/home.dart';
+import 'package:covid19_flutter/app/pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
