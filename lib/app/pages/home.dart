@@ -1,4 +1,5 @@
 import 'package:covid19_flutter/app/pages/stats/stats_container.dart';
+import 'package:covid19_flutter/cdk/appbar/rounded_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,9 +30,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: RoundedAppBar(
+        title: widget.title,
       ),
+      backgroundColor: Theme.of(context).primaryColor.withOpacity(.7),
       body: Center(
         child: StatsContainer(
           country: _selectedCountry,
