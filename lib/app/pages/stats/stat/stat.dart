@@ -11,7 +11,16 @@ class Stat extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[Text('$label:'), Text('$value')],
+      children: <Widget>[
+        Text(
+          '$label:',
+          style: Theme.of(context).textTheme.body1,
+        ),
+        Text(
+          '$value',
+          style: Theme.of(context).textTheme.body1,
+        )
+      ],
     );
   }
 }

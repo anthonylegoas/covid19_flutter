@@ -14,7 +14,7 @@ class Stats extends StatelessWidget {
       children: <Widget>[
         Text(
           covidStats.country,
-          style: Theme.of(context).textTheme.display1,
+          style: Theme.of(context).textTheme.title,
         ),
         Stat(label: 'Total confirmed', value: covidStats.totalConfirmed),
         Stat(label: 'New confirmed', value: covidStats.newConfirmed),

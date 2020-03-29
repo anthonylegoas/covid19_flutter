@@ -44,7 +44,10 @@ class _StatsContainerState extends State<StatsContainer> {
         if (snapshot.hasData) {
           return Stats(covidStats: snapshot.data);
         } else if (snapshot.hasError) {
-          return Text("${snapshot.error}");
+          return Text(
+            "${snapshot.error}",
+            style: TextStyle(color: Colors.white),
+          );
         }
 
         return CircularProgressIndicator();
