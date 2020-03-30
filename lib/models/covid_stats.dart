@@ -1,4 +1,6 @@
-class CovidStats {
+import 'package:equatable/equatable.dart';
+
+class CovidStats extends Equatable {
   final String country;
   final int newConfirmed;
   final int totalConfirmed;
@@ -7,7 +9,7 @@ class CovidStats {
   final int newRecovered;
   final int totalRecovered;
 
-  CovidStats(
+  const CovidStats(
       {this.country,
       this.newConfirmed,
       this.totalConfirmed,
@@ -16,15 +18,26 @@ class CovidStats {
       this.newRecovered,
       this.totalRecovered});
 
-  factory CovidStats.fromJson(Map<String, dynamic> json) {
+  @override
+  List<Object> get props => [
+        country,
+        newConfirmed,
+        totalConfirmed,
+        newDeaths,
+        totalDeaths,
+        newRecovered,
+        totalRecovered
+      ];
+
+  static CovidStats fromJson(dynamic json) {
     return CovidStats(
       country: json['Country'],
-      newConfirmed: json['NewConfirmed'],
-      totalConfirmed: json['TotalConfirmed'],
-      newDeaths: json['NewDeaths'],
-      totalDeaths: json['TotalDeaths'],
-      newRecovered: json['NewRecovered'],
-      totalRecovered: json['TotalRecovered'],
+      newConfirmed: json['NewConfirmed'] as int,
+      totalConfirmed: json['TotalConfirmed'] as int,
+      newDeaths: json['NewDeaths'] as int,
+      totalDeaths: json['TotalDeaths'] as int,
+      newRecovered: json['NewRecovered'] as int,
+      totalRecovered: json['TotalRecovered'] as int,
     );
   }
 }
