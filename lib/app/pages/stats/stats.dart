@@ -1,5 +1,5 @@
 import 'package:covid19_flutter/app/pages/stats/stat/stat.dart';
-import 'package:covid19_flutter/domain/entities/covid_stats.dart';
+import 'package:covid19_flutter/models/covid_stats.dart';
 import 'package:flutter/material.dart';
 
 class Stats extends StatelessWidget {
