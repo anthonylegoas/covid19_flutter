@@ -19,21 +19,22 @@ class AppTheme {
       textSelectionColor: PrimaryColor,
       backgroundColor: Background,
       textTheme: TextTheme(
-          title: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Hind',
-            fontSize: 24.0,
-          ),
-          body1: TextStyle(
-            color: Colors.red,
-            fontSize: 18.0,
-            fontFamily: 'Hind',
-          ),
-          body2: TextStyle(
-            color: Colors.white,
-            fontSize: 12.0,
-            fontFamily: 'Hind',
-          ),
+        title: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Hind',
+          fontSize: 24.0,
+        ),
+        body1: TextStyle(
+          color: Colors.red,
+          fontSize: 18.0,
+          fontFamily: 'Hind',
+        ),
+        body2: TextStyle(
+          color: Colors.white,
+          fontSize: 12.0,
+          fontFamily: 'Hind',
+        ),
+      ),
     );
   }
 }
