@@ -10,16 +10,38 @@ class Stats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Text(
-          covidStats.country,
-          style: Theme.of(context).textTheme.title,
+        Padding(
+          child: Text(
+            covidStats.country,
+            style: Theme.of(context).textTheme.title,
+          ),
+          padding: EdgeInsets.all(30),
         ),
-        Stat(label: 'Total confirmed', value: covidStats.totalConfirmed),
-        Stat(label: 'New confirmed', value: covidStats.newConfirmed),
-        Stat(label: 'Total deaths', value: covidStats.totalDeaths),
-        Stat(label: 'New deaths', value: covidStats.newDeaths),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Stat(
+                    label: 'Total confirmed', value: covidStats.totalConfirmed),
+                Stat(label: 'New confirmed', value: covidStats.newConfirmed),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Stat(label: 'Total deaths', value: covidStats.totalDeaths),
+                Stat(label: 'New deaths', value: covidStats.newDeaths),
+              ],
+            ),
+          ],
+        ),
       ],
     );
   }

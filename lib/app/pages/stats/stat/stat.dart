@@ -8,19 +8,22 @@ class Stat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          '$label:',
-          style: Theme.of(context).textTheme.body1,
-        ),
-        Text(
-          '$value',
-          style: Theme.of(context).textTheme.body1,
-        )
-      ],
+    return Padding(
+      padding: new EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            '$value',
+            style: Theme.of(context).textTheme.body1,
+          ),
+          Text(
+            '$label',
+            style: Theme.of(context).textTheme.body2,
+          ),
+        ],
+      ),
     );
   }
 }

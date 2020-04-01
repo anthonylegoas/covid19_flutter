@@ -12,14 +12,11 @@ class StatsContainer extends StatelessWidget {
           BlocProvider.of<CovidBloc>(context)
               .add(FetchCovidStats(country: 'France'));
           return Center(child: CircularProgressIndicator());
-        }
-        if (state is CovidStatsLoading) {
+        } else if (state is CovidStatsLoading) {
           return Center(child: CircularProgressIndicator());
-        }
-        if (state is CovidStatsLoaded) {
+        } else if (state is CovidStatsLoaded) {
           return Stats(covidStats: state.covidStats);
-        }
-        if (state is CovidStatsError) {
+        } else if (state is CovidStatsError) {
           return Text(
             'Something went wrong!',
             style: TextStyle(color: Colors.red),
