@@ -20,18 +20,20 @@ class AppTheme {
       backgroundColor: Background,
       textTheme: TextTheme(
         title: TextStyle(
-          color: Colors.white,
+          color: TextColor,
           fontFamily: 'Hind',
-          fontSize: 24.0,
+          fontSize: 32.0,
+          fontWeight: FontWeight.bold,
         ),
         body1: TextStyle(
-          color: Colors.red,
-          fontSize: 18.0,
+          color: TextColor,
+          fontSize: 28.0,
           fontFamily: 'Hind',
+          fontWeight: FontWeight.bold,
         ),
         body2: TextStyle(
-          color: Colors.white,
-          fontSize: 12.0,
+          color: Color.fromARGB(255, 220, 220, 220),
+          fontSize: 18.0,
           fontFamily: 'Hind',
         ),
       ),
